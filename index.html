@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Instagram Chat Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- UPLOAD SCREEN -->
+<section id="uploadScreen" class="upload">
+  <h2>Upload Instagram Chat</h2>
+  <input type="file" id="fileInput" multiple accept=".json" />
+  <button id="loadBtn">Load Chat</button>
+</section>
+
+<!-- CHAT SCREEN -->
+<section id="chatScreen" class="hidden">
+
+  <header class="dm-header">
+    <button id="backBtn" class="back-btn">←</button>
+    <div id="profileAvatar" class="avatar header-avatar"></div>
+
+    <div class="user-info">
+      <div id="chatName"></div>
+      <small>Instagram</small>
+    </div>
+
+    <div class="actions">
+      <button id="searchIcon">🔍</button>
+      <button id="dateIcon">📅</button>
+    </div>
+  </header>
+
+  <!-- SEARCH (HIDDEN BY DEFAULT) -->
+  <div id="searchBox" class="search-box hidden">
+    <input id="searchInput" placeholder="Search message…" />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div id="chat"></div>
+
+  <div id="navArrows" class="hidden">
+    <button id="prevBtn">↑</button>
+    <button id="nextBtn">↓</button>
+  </div>
+
+  <input type="date" id="datePicker" hidden />
+</section>
+
+<input type="file" id="photoInput" accept="image/*" hidden />
+
+<script src="app.js"></script>
+</body>
+</html>
